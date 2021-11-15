@@ -85,7 +85,12 @@ function useAsync(initialState) {
 }
 
 function PokemonInfo({pokemonName}) {
-  const {data: pokemon, status, error, run} = useAsync({
+  const {
+    data: pokemon,
+    status,
+    error,
+    run,
+  } = useAsync({
     status: pokemonName ? 'pending' : 'idle',
   })
 

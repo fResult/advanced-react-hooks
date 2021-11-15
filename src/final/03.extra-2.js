@@ -46,7 +46,13 @@ function usePokemonCache() {
 function PokemonInfo({pokemonName}) {
   const [cache, dispatch] = usePokemonCache()
 
-  const {data: pokemon, status, error, run, setData} = useAsync({
+  const {
+    data: pokemon,
+    status,
+    error,
+    run,
+    setData,
+  } = useAsync({
     status: pokemonName ? 'pending' : 'idle',
   })
 
